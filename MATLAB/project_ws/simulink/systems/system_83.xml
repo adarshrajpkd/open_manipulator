@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Reference" Name="ReferenceFrame" SID="84">
+    <P Name="Ports">[0, 0, 0, 0, 0, 0, 1]</P>
+    <P Name="Position">[30, 40, 70, 80]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="LibraryVersion">7.41</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="SourceType">Reference
+Frame</P>
+    <P Name="SourceProductBaseCode">MS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="world_fixed_OriginTransform" SID="85">
+    <P Name="Ports">[0, 0, 0, 0, 0, 1, 1]</P>
+    <P Name="Position">[210, 60, 250, 100]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="LibraryVersion">7.41</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <P Name="SourceProductBaseCode">MS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="TranslationMethod">Cartesian</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationLengthUnit">m</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationCartesianOffset">[0, 0, 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="RotationMethod">RotationSequence</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0.0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationSequenceAxes">BaseAxes</P>
+      <P Name="RotationSequence">XYZ</P>
+      <P Name="RotationSequenceAngles">[0, 0, 0]</P>
+      <P Name="RotationSequenceAnglesUnits">rad</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationMatrix">[1 0 0; 0 1 0; 0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="PMIOPort" Name="F" SID="86">
+    <P Name="Position">[130, 30, 150, 50]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Side">Left</P>
+  </Block>
+  <Block BlockType="PMIOPort" Name="F1" SID="87">
+    <P Name="Position">[310, 70, 330, 90]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">2</P>
+    <P Name="Side">Right</P>
+  </Block>
+  <Line LineType="Connection">
+    <P Name="ZOrder">1</P>
+    <P Name="Points">[100, 60; 40, 0; 0, 20; 55, 0]</P>
+    <P Name="Dst">85#lconn:1</P>
+    <Branch ConnectType="SRC_DEST">
+      <P Name="Src">84#rconn:1</P>
+      <P Name="Points">[15, 0]</P>
+    </Branch>
+    <Branch ConnectType="SRC_SRC">
+      <P Name="Points">[0, -20]</P>
+      <P Name="Dst">86#rconn:1</P>
+    </Branch>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">4</P>
+    <P Name="Src">85#rconn:1</P>
+    <P Name="Dst">87#rconn:1</P>
+  </Line>
+</System>

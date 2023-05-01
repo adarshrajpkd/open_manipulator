@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[30, 30, 1010, 750]</P>
+  <Block BlockType="Reference" Name="EE" SID="469">
+    <PortCounts rconn="1"/>
+    <P Name="Position">[175, 20, 215, 60]</P>
+    <P Name="ZOrder">27</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="LibraryVersion">7.61</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="BasedOnType">Density</P>
+      <P Name="BrickDimensions">[0.02 0.02 0.02]</P>
+      <P Name="BrickDimensionUnits">m</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="CenterOfMass">[0 0 0]</P>
+      <P Name="CenterOfMassUnits">m</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="GraphicDiffuseColor">[1.0 0.2 0.2]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="Density">1000</P>
+      <P Name="DensityUnits">kg/m^3</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">on</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="SerializedFrames">&lt;Frames/&gt;</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="InertiaType">CalculateFromGeometry</P>
+      <P Name="Mass">1</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="GraphicOpacity">1.0</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Jee-to-EE" SID="470">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[100, 20, 140, 60]</P>
+    <P Name="ZOrder">26</P>
+    <P Name="LibraryVersion">7.61</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="TranslationMethod">Cartesian</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationLengthUnit">m</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationCartesianOffset">[0 0.0075 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="RotationMethod">None</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0.0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationMatrix">[1 0 0; 0 1 0; 0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="PMIOPort" Name="Jee" SID="471">
+    <P Name="Position">[20, 33, 50, 47]</P>
+    <P Name="ZOrder">28</P>
+    <P Name="Side">Left</P>
+  </Block>
+  <Line LineType="Connection">
+    <P Name="ZOrder">1</P>
+    <P Name="Src">469#rconn:1</P>
+    <P Name="Dst">470#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">2</P>
+    <P Name="Src">470#lconn:1</P>
+    <P Name="Dst">471#rconn:1</P>
+  </Line>
+</System>

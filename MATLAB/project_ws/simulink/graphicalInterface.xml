@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GraphicalInterface>
+  <P Name="NumRootInports">0</P>
+  <P Name="NumRootOutports">0</P>
+  <P Name="ParameterArgumentNames"/>
+  <P Name="NumModelReferences">0</P>
+  <P Name="NumTestPointedSignals">0</P>
+  <P Name="NumProvidedFunctions">0</P>
+  <P Name="NumRequiredFunctions">0</P>
+  <P Name="NumResetEvents">0</P>
+  <P Name="HasInitializeEvent">0</P>
+  <P Name="HasTerminateEvent">0</P>
+  <P Name="PreCompExecutionDomainType">Unset</P>
+  <P Name="IsExportFunctionModel">0</P>
+  <P Name="SimulinkSubDomainType">Simulink</P>
+  <P Name="NumParameterArguments">0</P>
+  <P Name="NumExternalFileReferences">74</P>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="Path">$bdroot/End effector/End </P>
+    <P Name="SID">169</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/End effector/Inertia</P>
+    <P Name="SID">171</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/End effector/InertiaOriginTransform</P>
+    <P Name="SID">172</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/End effector/ReferenceFrame</P>
+    <P Name="SID">173</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/End effector/VisualOriginTransform</P>
+    <P Name="SID">175</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/End effector/grip_joint_sub_AxisInvTransform</P>
+    <P Name="SID">176</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Utilities/Mechanism
+Configuration</P>
+    <P Name="Path">$bdroot/MechanismConfiguration</P>
+    <P Name="SID">1</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Solver
+Configuration</P>
+    <P Name="Path">$bdroot/Solver Configuration</P>
+    <P Name="SID">2</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/World Frame</P>
+    <P Name="Path">$bdroot/World</P>
+    <P Name="SID">3</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Prismatic
+Joint</P>
+    <P Name="Path">$bdroot/grip_joint</P>
+    <P Name="SID">4</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Prismatic
+Joint</P>
+    <P Name="Path">$bdroot/grip_joint_sub</P>
+    <P Name="SID">5</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/grip_link/Inertia</P>
+    <P Name="SID">157</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link/InertiaOriginTransform</P>
+    <P Name="SID">158</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/grip_link/ReferenceFrame</P>
+    <P Name="SID">159</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/grip_link/Visual</P>
+    <P Name="SID">160</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link/VisualOriginTransform</P>
+    <P Name="SID">161</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link/grip_joint_AxisInvTransform</P>
+    <P Name="SID">162</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/grip_link_sub/Inertia</P>
+    <P Name="SID">149</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link_sub/InertiaOriginTransform</P>
+    <P Name="SID">150</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/grip_link_sub/ReferenceFrame</P>
+    <P Name="SID">151</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/grip_link_sub/Visual</P>
+    <P Name="SID">152</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link_sub/VisualOriginTransform</P>
+    <P Name="SID">153</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/grip_link_sub/grip_joint_sub_AxisInvTransform</P>
+    <P Name="SID">154</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Revolute Joint</P>
+    <P Name="Path">$bdroot/joint1</P>
+    <P Name="SID">22</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Revolute Joint</P>
+    <P Name="Path">$bdroot/joint2</P>
+    <P Name="SID">23</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Revolute Joint</P>
+    <P Name="Path">$bdroot/joint3</P>
+    <P Name="SID">24</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Revolute Joint</P>
+    <P Name="Path">$bdroot/joint4</P>
+    <P Name="SID">25</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/link1/Inertia</P>
+    <P Name="SID">92</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link1/InertiaOriginTransform</P>
+    <P Name="SID">93</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/link1/ReferenceFrame</P>
+    <P Name="SID">94</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/link1/Visual</P>
+    <P Name="SID">95</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link1/VisualOriginTransform</P>
+    <P Name="SID">96</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link1/joint1_AxisTransform</P>
+    <P Name="SID">97</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link1/joint1_OriginTransform</P>
+    <P Name="SID">98</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/link2/Inertia</P>
+    <P Name="SID">102</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link2/InertiaOriginTransform</P>
+    <P Name="SID">103</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/link2/ReferenceFrame</P>
+    <P Name="SID">104</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/link2/Visual</P>
+    <P Name="SID">105</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link2/VisualOriginTransform</P>
+    <P Name="SID">106</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link2/joint1_AxisInvTransform</P>
+    <P Name="SID">107</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link2/joint2_AxisTransform</P>
+    <P Name="SID">108</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link2/joint2_OriginTransform</P>
+    <P Name="SID">109</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/link3/Inertia</P>
+    <P Name="SID">113</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link3/InertiaOriginTransform</P>
+    <P Name="SID">114</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/link3/ReferenceFrame</P>
+    <P Name="SID">115</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/link3/Visual</P>
+    <P Name="SID">116</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link3/VisualOriginTransform</P>
+    <P Name="SID">117</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link3/joint2_AxisInvTransform</P>
+    <P Name="SID">118</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link3/joint3_AxisTransform</P>
+    <P Name="SID">119</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link3/joint3_OriginTransform</P>
+    <P Name="SID">120</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/link4/Inertia</P>
+    <P Name="SID">124</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link4/InertiaOriginTransform</P>
+    <P Name="SID">125</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/link4/ReferenceFrame</P>
+    <P Name="SID">126</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/link4/Visual</P>
+    <P Name="SID">127</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link4/VisualOriginTransform</P>
+    <P Name="SID">128</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link4/joint3_AxisInvTransform</P>
+    <P Name="SID">129</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link4/joint4_AxisTransform</P>
+    <P Name="SID">130</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link4/joint4_OriginTransform</P>
+    <P Name="SID">131</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/Inertia</P>
+    <P Name="Path">$bdroot/link5/Inertia</P>
+    <P Name="SID">135</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/InertiaOriginTransform</P>
+    <P Name="SID">136</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/link5/ReferenceFrame</P>
+    <P Name="SID">137</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Body Elements/File Solid</P>
+    <P Name="Path">$bdroot/link5/Visual</P>
+    <P Name="SID">138</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/VisualOriginTransform</P>
+    <P Name="SID">139</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_AxisTransform</P>
+    <P Name="SID">140</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_OriginTransform</P>
+    <P Name="SID">141</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_sub_AxisTransform</P>
+    <P Name="SID">142</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_sub_AxisTransform1</P>
+    <P Name="SID">164</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_sub_OriginTransform</P>
+    <P Name="SID">143</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/grip_joint_sub_OriginTransform1</P>
+    <P Name="SID">165</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/link5/joint4_AxisInvTransform</P>
+    <P Name="SID">144</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Reference
+Frame</P>
+    <P Name="Path">$bdroot/world/ReferenceFrame</P>
+    <P Name="SID">84</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="Path">$bdroot/world/world_fixed_OriginTransform</P>
+    <P Name="SID">85</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Weld Joint</P>
+    <P Name="Path">$bdroot/world_fixed</P>
+    <P Name="SID">88</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sm_lib/Joints/Weld Joint</P>
+    <P Name="Path">$bdroot/world_fixed1</P>
+    <P Name="SID">178</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <P Name="OrderedModelArguments">1</P>
+</GraphicalInterface>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LogicAnalyzerPlugin>
+  <P Name="LogicAnalyzerGraphicalSettings">{
+  &quot;cursors&quot; : {
+    &quot;activeCursor&quot; : 0,
+    &quot;lockedCursors&quot; : [
+
+    ],
+    &quot;startingCursor&quot; : 0,
+    &quot;times&quot; : [
+      0
+    ]
+  },
+  &quot;global&quot; : {
+  },
+  &quot;panels&quot; : [
+    {
+      &quot;height&quot; : 100,
+      &quot;startingTrace&quot; : 0,
+      &quot;traces&quot; : [
+        {
+          &quot;signalId&quot; : &quot;b98984e1-363a-4990-973d-cd70ae40a024&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        },
+        {
+          &quot;signalId&quot; : &quot;11974dec-5ad4-4ae0-8d8f-c34f4c194e06&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        },
+        {
+          &quot;signalId&quot; : &quot;f6727f94-59f9-4f46-8301-431e0b7221d1&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        },
+        {
+          &quot;signalId&quot; : &quot;6b8f6b43-08f9-46e9-aefa-ef86d2a47f15&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        },
+        {
+          &quot;signalId&quot; : &quot;f9fbd2a6-58c2-431a-92c5-fc93e74cbb98&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        },
+        {
+          &quot;signalId&quot; : &quot;c3b1b499-40ca-40af-9412-bb12166393cc&quot;,
+          &quot;type&quot; : &quot;wave&quot;
+        }
+      ],
+      &quot;yOffset&quot; : 0
+    }
+  ],
+  &quot;timeAxis&quot; : {
+    &quot;pixelsPerSecond&quot; : 235.4613326997906
+  },
+  &quot;trigger&quot; : {
+    &quot;enabled&quot; : false,
+    &quot;mode&quot; : &quot;once&quot;,
+    &quot;samples&quot; : 200,
+    &quot;signals&quot; : {
+    },
+    &quot;stages&quot; : [
+      {
+        &quot;conditions&quot; : [
+
+        ],
+        &quot;operator&quot; : &quot;AND&quot;
+      }
+    ]
+  }
+}</P>
+</LogicAnalyzerPlugin>
