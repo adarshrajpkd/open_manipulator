@@ -14,6 +14,7 @@ from std_srvs.srv import Empty
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from open_manipulator_msgs.srv import SetJointPosition, SetJointPositionRequest
 from sensor_msgs.msg import JointState
+
 pln_time = 0
 slp_time = 0
 #initialise
@@ -27,25 +28,7 @@ joint_indices = list(range(num_joints))
 joint_damping = [0.1] * num_joints
 joint_angles = {joint_name: [] for joint_name in ['joint1', 'joint2', 'joint3', 'joint4', 'gripper']}
 
-
-#functions
-def callback(data):
-    # Store the joint angles for each joint
-    for i in range(len(data.name)):
-        joint_name = data.name[i]
-        joint_angle = data.position[i]
-        joint_angles[joint_name].append(joint_angle)
-def plot_fk():
-     rospy.Subscriber('/open_manipulator_x/joint_states', JointState, callback)
-     while not rospy.is_shutdown():
-          plt.clf()
-          for joint_name in joint_angles.keys():
-               plt.plot(joint_angles[joint_name])
-          plt.xlabel('Time (s)')
-          plt.ylabel('Joint Angle (rad)')
-          plt.title('Joint Angles of Open Manipulator X')
-          plt.legend(joint_angles.keys())
-          plt.pause(0.1)         
+      
 def ik_move(a):
     x = a[0]
     y = a[1]
@@ -126,36 +109,21 @@ def circle(r):
         ik_move([x,y,z])
         rospy.sleep(1 / speed)
 
-home = [0,0,0,0]
-inter = [0,-1.05,0.35,0.7]
-
-
-#grip_move('open')
-#fk_move(home)
-#fk_move(source)
-#grip_move('close')
-#fk_move(inter)
-#fk_move(destination)
-#grip_move('open')
-#fk_move(home)
-#grip_move('close')
-
-#ik_move([0.286,0,0.205])
-#ik_move([0.128,0,0.105])
-#ik_move([0.134,0,0.241])
-#ik_move([0.213,-0.062,0.118])
+home = [3.14,0,0,0]
+inter = [3.14,-1.05,0.35,0.7]
 
 
 print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ")
 time.sleep(4)
 print("Open Manipulator Kinematics \n ")
 time.sleep(2)
-print ("Enter your selection : \n")
-time.sleep(2)
+print ("Enter your selection \n*********************\n")
 print("1. Forward Kinematics \n2. Inverse Kinematics \n3. Trajectory \n")
 temp = int(input("Your Input : "))
 
 if (temp == 1):
+    pln_time = 5.0
+    slp_time = 5.0
     print("You have selected Forward Kinematics...")
     time.sleep(1.5)
     print (ansi_color('blink_fast',"Loading ..."))
@@ -170,8 +138,6 @@ if (temp == 1):
     print (ansi_color('blink_fast',"Planning"))
     time.sleep(5)
     print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ")
-    pln_time = 4
-    slp_time = 5
     grip_move('open')
     fk_move(home)
     fk_move(source)
@@ -182,6 +148,8 @@ if (temp == 1):
     fk_move(home)
     grip_move('close')
 elif (temp == 2):
+    pln_time = 5.0
+    slp_time = 5.0
     print("You have selected Inverse Kinematics...")
     time.sleep(1.5)
     print (ansi_color('blink_fast',"Loading ..."))
@@ -196,8 +164,6 @@ elif (temp == 2):
     print (ansi_color('blink_fast',"Planning"))
     time.sleep(5)
     print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ")
-    pln_time = 4
-    slp_time = 5
     grip_move('open')
     fk_move(home)
     ik_move(source)
@@ -218,17 +184,19 @@ elif (temp ==3):
           time.sleep(1)
           print (ansi_color('blink_fast',"Planning"))
           time.sleep(3)
-          pln_time = 3
-          slp_time = 3.5
+          pln_time = 3.0
+          slp_time = 4.0
           rect(l)
      elif y == 2:
           r = float(input("Enter the radius : "))
           time.sleep(1.5)
           print (ansi_color('blink_fast',"Planning"))
+          pln_time = 4.0
+          slp_time = 3.0
           ik_move([0.286, 0.0, 0.204])
           time.sleep(2)
           pln_time = 0.5
-          slp_time = 1
+          slp_time = 0.5
           circle(r)
 else:
     print("Wrong Input")
