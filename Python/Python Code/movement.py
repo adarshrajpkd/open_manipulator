@@ -14,7 +14,8 @@ from std_srvs.srv import Empty
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from open_manipulator_msgs.srv import SetJointPosition, SetJointPositionRequest
 from sensor_msgs.msg import JointState
-
+pln_time = 0
+slp_time = 0
 #initialise
 p.connect(p.GUI)
 p.setGravity(0, 0, -9.81)
@@ -66,11 +67,11 @@ def fk_move(a):
     goal_joint_space_path_request_object.joint_position.position = a
     goal_joint_space_path_request_object.joint_position.max_accelerations_scaling_factor = 1.0
     goal_joint_space_path_request_object.joint_position.max_velocity_scaling_factor = 1.0
-    goal_joint_space_path_request_object.path_time = 4
+    goal_joint_space_path_request_object.path_time = pln_time
     rospy.loginfo("Doing Service Call")
     result = goal_joint_space_path_service_client(goal_joint_space_path_request_object)
     print (result)
-    rospy.sleep(5)
+    rospy.sleep(slp_time)
 def grip_move(x):
     if (x== 'open'):
         x = [0.01]
@@ -115,8 +116,8 @@ def rect(a):
 def circle(r):
     radius = r
     center = [0.286, 0.0, 0.204]
-    num_points = 20
-    speed = 1
+    num_points = 30
+    speed = 4
     for i in range(num_points):
         theta = 2 * math.pi * i / num_points
         x = center[0] + radius * math.cos(theta)
@@ -169,7 +170,8 @@ if (temp == 1):
     print (ansi_color('blink_fast',"Planning"))
     time.sleep(5)
     print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ")
-
+    pln_time = 4
+    slp_time = 5
     grip_move('open')
     fk_move(home)
     fk_move(source)
@@ -194,6 +196,8 @@ elif (temp == 2):
     print (ansi_color('blink_fast',"Planning"))
     time.sleep(5)
     print("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ")
+    pln_time = 4
+    slp_time = 5
     grip_move('open')
     fk_move(home)
     ik_move(source)
@@ -214,12 +218,17 @@ elif (temp ==3):
           time.sleep(1)
           print (ansi_color('blink_fast',"Planning"))
           time.sleep(3)
+          pln_time = 3
+          slp_time = 3.5
           rect(l)
      elif y == 2:
           r = float(input("Enter the radius : "))
           time.sleep(1.5)
           print (ansi_color('blink_fast',"Planning"))
+          ik_move([0.286, 0.0, 0.204])
           time.sleep(2)
+          pln_time = 0.5
+          slp_time = 1
           circle(r)
 else:
     print("Wrong Input")
